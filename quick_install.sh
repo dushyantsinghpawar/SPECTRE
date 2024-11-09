@@ -5,8 +5,8 @@ urle () { [[ "${1}" ]] || return 1; local LANG=C i x; for (( i = 0; i < ${#1}; i
 
 # username and password input
 echo -e "\nIf you do not have an account you can register at https://flame.is.tue.mpg.de/ following the installation instruction."
-read -p "Username (FLAME):" username
-read -p "Password (FLAME):" password
+# read -p "Username (FLAME):" username
+# read -p "Password (FLAME):" password
 username=$(urle $username)
 password=$(urle $password)
 
