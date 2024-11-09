@@ -1,5 +1,6 @@
 scikit_image
-kornia chumpy
+kornia
+chumpy
 librosa
 av
 loguru
