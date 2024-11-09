@@ -109,7 +109,9 @@ def main(args):
         overlapping_indices[-2] = np.unique(overlapping_indices[-2]).tolist()
         overlapping_indices = overlapping_indices[:-1]
 
-    overlapping_indices = np.array(overlapping_indices, dtype=object)
+    #overlapping_indices = np.array(overlapping_indices)
+    overlapping_indices = np.array(overlapping_indices, dtype=object) # data type: object added to take non-homogenous array in consideration as well.
+    
     image_paths = np.array(image_paths)
     all_shape_images = []
     all_images = []
