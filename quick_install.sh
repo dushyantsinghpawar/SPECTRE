@@ -7,8 +7,11 @@ urle () { [[ "${1}" ]] || return 1; local LANG=C i x; for (( i = 0; i < ${#1}; i
 echo -e "\nIf you do not have an account you can register at https://flame.is.tue.mpg.de/ following the installation instruction."
 # read -p "Username (FLAME):" username
 # read -p "Password (FLAME):" password
-username=$(urle $username)
-password=$(urle $password)
+# username=$(urle $username)
+# password=$(urle $password)
+
+username=$(urle $1)
+password=$(urle $2)
 
 echo -e "\nDownloading FLAME..."
 mkdir -p data/FLAME2020/
