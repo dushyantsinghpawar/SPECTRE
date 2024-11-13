@@ -44,6 +44,19 @@ pip install -r requirements.txt # install the rest of the requirements
 
 Installing a working setup of Pytorch3d with Pytorch can be a bit tricky. It is part of the requirements.txt file. We are downloading its implementation from Github Provided by [FacebookResearch](https://github.com/facebookresearch/pytorch3d.git).
 
+After installing make the following changes in the "chumpy" library package (generally you can find it in /usr/local/lib/python3.10/dist-packages/chumpy/init.py'):
+Change the numpy part of the code with the code given below:
+```
+from numpy import nan, inf
+bool = bool
+int = int
+float = float
+complex = complex
+object = object
+unicode = str
+str = str
+```
+
 Install the face_alignment and face_detection packages:
 ```bash
 cd external/face_alignment
