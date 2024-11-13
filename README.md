@@ -42,7 +42,7 @@ You need to have installed a working version of Pytorch with Python 3.6 or highe
 pip install -r requirements.txt # install the rest of the requirements
 ```
 
-Installing a working setup of Pytorch3d with Pytorch can be a bit tricky. It is part of the requirements.txt file. We are downloading its implementation from Github Provided by Facebook.
+Installing a working setup of Pytorch3d with Pytorch can be a bit tricky. It is part of the requirements.txt file. We are downloading its implementation from Github Provided by [FacebookResearch](https://github.com/facebookresearch/pytorch3d.git).
 
 Install the face_alignment and face_detection packages:
 ```bash
