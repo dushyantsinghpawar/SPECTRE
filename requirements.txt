@@ -10,3 +10,9 @@ opencv-python
 phonemizer
 jiwer
 yacs
+torch
+torchvision
+torchaudio
+fvcore
+iopath
+git+https://github.com/facebookresearch/pytorch3d.git
