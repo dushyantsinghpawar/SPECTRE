@@ -56,6 +56,43 @@ object = object
 unicode = str
 str = str
 ```
+To make aforementioned changes, Run the following command (Since we have executed the program in Google Colab, the following code will make the required changes in the colab notebook):
+```
+import os
+
+# Define the path to the __init__.py file
+chumpy_init_path = '/usr/local/lib/python3.10/dist-packages/chumpy/__init__.py'
+
+# Define the content to find and replace
+old_content = "from numpy import bool, int, float, complex, object, unicode, str, nan, inf"
+new_content = """from numpy import nan, inf
+bool = bool
+int = int
+float = float
+complex = complex
+object = object
+unicode = str
+str = str
+"""
+
+# Check if the file exists
+if os.path.exists(chumpy_init_path):
+    # Read the file content
+    with open(chumpy_init_path, 'r') as file:
+        file_data = file.read()
+
+    # Replace the old content with the new content
+    if old_content in file_data:
+        file_data = file_data.replace(old_content, new_content)
+        # Write the updated content back to the file
+        with open(chumpy_init_path, 'w') as file:
+            file.write(file_data)
+        print("Successfully updated chumpy __init__.py file.")
+    else:
+        print("Specified old content not found in the file.")
+else:
+    print(f"File not found: {chumpy_init_path}")
+```
 
 Install the face_alignment and face_detection packages:
 ```bash
