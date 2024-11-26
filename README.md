@@ -108,7 +108,7 @@ Before implementing the "git lfs pull" You may need to install git-lfs to run th
 curl -s https://packagecloud.io/install/repositories/github/git-lfs/script.deb.sh | sudo bash
 sudo apt-get install git-lfs
 ```
-Download the FLAME model and the pretrained SPECTRE model, you mau need to create an account if you don't already have one, replace "<user_name>" & "<password>" with your FLAME credentials:
+Download the FLAME model and the pretrained SPECTRE model, you mau need to create an account if you don't already have one, replace <user_name> & <password> with your FLAME credentials:
 ```bash
 pip install gdown
 bash quick_install.sh "<user_name>" "<password>"
