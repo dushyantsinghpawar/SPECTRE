@@ -37,15 +37,15 @@ git clone --recurse-submodules -j4 https://github.com/dushyantsinghpawar/SPECTRE
 cd SPECTRE
 ```  
 
-Install all the requirements:
+Install all the dependencies:
 ```
 pip install -r requirements.txt # install the requirements
 ```
 
 Note: Installing a working setup of Pytorch3d with Pytorch can be a bit tricky. It is part of the requirements.txt file. We are downloading its implementation from Github Provided by [FacebookResearch](https://github.com/facebookresearch/pytorch3d.git).
 
-Once all the requirements are installed succesfully, make the following changes in the "chumpy" library package (generally you can find it in "/usr/local/lib/python3.10/dist-packages/chumpy/init.py'"):
-Replace the "numpy" part of the code with the code given below:
+Update "chumpy" package (In colab it can found in "/usr/local/lib/python3.10/dist-packages/chumpy/init.py'"):
+Replace the "from numpy import bool, int, float, complex, object, unicode, str, nan, inf" with the code given below:
 ```
 from numpy import nan, inf
 bool = bool
@@ -56,7 +56,7 @@ object = object
 unicode = str
 str = str
 ```
-To make aforementioned changes, Run the following command (Since we have executed the program in Google Colab, the following code will make the required changes in the colab notebook):
+Aforementioned changes can also be automated, To do so run the following command (Since we have executed the program in Google Colab, the following code will make the required changes in the colab notebook):
 ```
 import os
 
