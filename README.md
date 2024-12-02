@@ -45,7 +45,7 @@ pip install -r requirements.txt # install the requirements
 Note: Installing a working setup of Pytorch3d with Pytorch can be a bit tricky. It is part of the requirements.txt file. We are downloading its implementation from Github Provided by [FacebookResearch](https://github.com/facebookresearch/pytorch3d.git).
 
 Update "chumpy" package (In colab it can found in "/usr/local/lib/python3.10/dist-packages/chumpy/init.py'"):
-Replace the "from numpy import bool, int, float, complex, object, unicode, str, nan, inf" with the code given below:
+Replace the following code ```from numpy import bool, int, float, complex, object, unicode, str, nan, inf``` with the code given below:
 ```
 from numpy import nan, inf
 bool = bool
