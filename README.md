@@ -37,12 +37,12 @@ git clone --recurse-submodules -j4 https://github.com/dushyantsinghpawar/SPECTRE
 cd SPECTRE
 ```  
 
-You need to have installed a working version of Pytorch with Python 3.6 or higher and Pytorch 3D. You can use the following commands to create a working installation:
+Install all the requirements:
 ```
 pip install -r requirements.txt # install the requirements
 ```
 
-Installing a working setup of Pytorch3d with Pytorch can be a bit tricky. It is part of the requirements.txt file. We are downloading its implementation from Github Provided by [FacebookResearch](https://github.com/facebookresearch/pytorch3d.git).
+Note: Installing a working setup of Pytorch3d with Pytorch can be a bit tricky. It is part of the requirements.txt file. We are downloading its implementation from Github Provided by [FacebookResearch](https://github.com/facebookresearch/pytorch3d.git).
 
 After installing make the following changes in the "chumpy" library package (generally you can find it in "/usr/local/lib/python3.10/dist-packages/chumpy/init.py'"):
 Replace the "numpy" part of the code with the code given below:
