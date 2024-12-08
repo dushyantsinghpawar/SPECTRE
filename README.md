@@ -27,8 +27,8 @@ Visual Speech-Aware Perceptual 3D Facial Expression Reconstruction from Videos
 Panagiotis P. Filntisis, George Retsinas, Foivos Paraperas-Papantoniou, Athanasios Katsamanis, Anastasios Roussos, and Petros Maragos
 arXiv 2022
 ```
-
-
+Implementation
+```This is a Google Colab Notebook Implementation.```
 
 ## Installation
 Clone the repo and its submodules:
