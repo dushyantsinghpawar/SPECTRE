@@ -27,19 +27,20 @@ Visual Speech-Aware Perceptual 3D Facial Expression Reconstruction from Videos
 Panagiotis P. Filntisis, George Retsinas, Foivos Paraperas-Papantoniou, Athanasios Katsamanis, Anastasios Roussos, and Petros Maragos
 arXiv 2022
 ```
-Implementation
+Implementation:
+
 ```This is a Google Colab Notebook Implementation.```
 
 ## Installation
 Clone the repo and its submodules:
 ```bash
-git clone --recurse-submodules -j4 https://github.com/dushyantsinghpawar/SPECTRE
-cd SPECTRE
+!git clone --recurse-submodules -j4 https://github.com/dushyantsinghpawar/SPECTRE
+%cd SPECTRE
 ```  
 
 Install all the dependencies:
 ```
-pip install -r requirements.txt # install the requirements
+!pip install -r requirements.txt # install the requirements
 ```
 
 Note: Installing a working setup of Pytorch3d with Pytorch can be a bit tricky. It is part of the requirements.txt file. We are downloading its implementation from Github Provided by [FacebookResearch](https://github.com/facebookresearch/pytorch3d.git).
@@ -96,29 +97,29 @@ else:
 
 Install the face_alignment and face_detection packages:
 ```bash
-cd external/face_alignment
-pip install -e .
-cd ../face_detection
-git lfs pull
-pip install -e .
-cd ../..
+%cd external/face_alignment
+!pip install -e .
+%cd ../face_detection
+!git lfs pull
+!pip install -e .
+%cd ../..
 ```
 Before implementing the "git lfs pull" You may need to install git-lfs to run the above commands. [More details](https://stackoverflow.com/questions/48734119/git-lfs-is-not-a-git-command-unclear)  
 ```bash
-curl -s https://packagecloud.io/install/repositories/github/git-lfs/script.deb.sh | sudo bash
-sudo apt-get install git-lfs
+!curl -s https://packagecloud.io/install/repositories/github/git-lfs/script.deb.sh | sudo bash
+!sudo apt-get install git-lfs
 ```
 Download the FLAME model and the pretrained SPECTRE model, you mau need to create an account if you don't already have one, replace <user_name> & \<password> with your FLAME credentials:
 ```bash
-pip install gdown
-bash quick_install.sh "<user_name>" "<password>"
+!pip install gdown
+!bash quick_install.sh "<user_name>" "<password>"
 ```
 
 ## Demo
 Samples are included in ``samples`` folder. You can run the demo by running 
 
 ```bash
-python demo.py --input samples/LRS3/0Fi83BHQsMA_00002.mp4 --audio
+!python demo.py --input samples/LRS3/0Fi83BHQsMA_00002.mp4 --audio
 ```
 
 The audio flag extracts audio from the input video and puts it in the output shape video for visualization purposes (ffmpeg is required for video creation).
